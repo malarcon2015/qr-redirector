@@ -1,0 +1,8 @@
+services:
+  - name: qr-redirector
+    type: web
+    runtime: python
+    plan: free
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    healthCheckPath: /health
